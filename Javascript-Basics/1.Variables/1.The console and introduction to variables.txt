@@ -1,0 +1,43 @@
+Before we begin with variables, we have to talk about the console.log() statement.
+
+console.log(1); -> 1
+
+As you can see, console.log() simply displays information in your JavaScript console — in this case the value 1.
+
+We will use console.log() as a tool to test our code.
+
+Great! Now, we can talk about JavaScript variables.
+
+Variables are containers that store information for later use.
+
+Let's create our first variable:
+let test;
+
+We use the let keyword to declare a variable with the name test. Declaring a variable is JavaScript slang for creating a variable.
+
+But, what happens if we use console.log() to log our new variable?
+let test;
+console.log(test); -> undefined
+
+The console prints undefined. This is because we have not initialized our variable. Initializing a variable is the process of assigning a value to it.
+
+We can assign a value to a variable with the assignment operator =.
+let test;
+test = 1;
+console.log(test); -> 1
+
+Great! Now, we have created a new variable and assigned it the value 1. We have also used console.log() to access this value.
+
+You can also assign a value to a variable directly when you create it.
+let test = 1;
+console.log(test); -> 1
+
+What will be the output?
+let num;
+console.log(num); -> undefined
+
+What will be the output?
+let num = 0;
+console.log(num); -> 0
+num = 2;
+console.log(num); -> 2

@@ -1,0 +1,44 @@
+True or False?
+You can reassign a new value to a variable declared with let.
+-> True
+
+
+True or False?
+Variables declared with let reveal their value only once.
+-> False
+
+
+What will be the output?
+const num;
+num = 6;
+console.log(num);
+-> SyntaxError: Missing initializer in const declaration
+
+
+What will be the output?
+let num = 2;
+num = 6;
+console.log(num);
+-> 6
+
+
+What will be the output?
+const num = 2;
+num = 6;
+console.log(num);
+-> Uncaught TypeError: Assignment to constant variable
+
+
+
+Which of the following is correct?
+
+You can redeclare a variable called test if it was declared with let the first time.
+If you declare a variable with const you have to immediately assign a value to it. - right
+You can always access a variable anywhere in your code as long as you declare it with let.
+
+
+
+True or False?
+let test;
+The variable test has the value undefined.
+-> True
