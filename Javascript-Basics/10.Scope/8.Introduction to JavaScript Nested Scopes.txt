@@ -1,0 +1,11 @@
+In this lesson we will explore the concept of nested scopes. In JavaScript, you can create a scope whithin another scope. This creates a hierarchy of scopes, where the inner/child scope has access to the variables or functions defined in the outer/parent scope.
+
+function outer(){
+    let x = 12;
+    function inner(){
+        x = 13;
+        log(x); // 13
+        const y=7;
+    }
+    //log(y)
+}

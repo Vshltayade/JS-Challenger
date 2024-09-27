@@ -1,0 +1,8 @@
+In this lesson, you will expand your understanding of JavaScript scopes by introducing block scopes. Block scopes are a type of local scope that is defined within a block of code, such as within an if statement. By using block scopes, you can limit the visibility of variables to only the block they are defined in.
+
+
+if,for blocks
+
+{
+    let x = 10;
+}

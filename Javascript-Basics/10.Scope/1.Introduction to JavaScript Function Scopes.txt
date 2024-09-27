@@ -1,0 +1,12 @@
+A Scope in JavaScript describes a region of code from which you can access certain variables or functions. There's the global scope and different types of local scopes. In this lesson, you will see how Function Scopes work and how you can work with them.
+
+global scope
+
+
+function/local scope
+
+
+block scope
+
+var - global
+let/const = block
