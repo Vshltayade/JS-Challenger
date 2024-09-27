@@ -1,0 +1,5 @@
+You already know how to declare functions using function declarations or function expressions (which are almost the same thing). In this lesson we will learn how to declare arrow functions, a modern and more compact alternative.
+
+let arrow = () => {
+    
+}

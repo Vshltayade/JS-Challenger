@@ -1,0 +1,8 @@
+You already know how to declare function parameters. In this lesson we will learn the concept of rest parameters, a practical way to work with multiple function arguments.
+
+let arr = [1,2,3,3,4]
+fun(arr)
+function fun(rest){
+    log(rest) // [1,2,3,3,4]
+}
+
