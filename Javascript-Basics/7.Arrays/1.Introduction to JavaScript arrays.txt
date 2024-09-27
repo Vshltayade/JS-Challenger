@@ -1,0 +1,5 @@
+Javascript arrays allow you to store multiple values in a single variable. They are used to group related data together, and to make it easier to work with large sets of data. This lesson will show you how to create and work with arrays.
+
+let array = [1,2,3,4];
+
+let array = new Array('a','b','c');
