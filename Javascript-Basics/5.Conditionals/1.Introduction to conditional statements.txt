@@ -1,0 +1,59 @@
+JavaScript conditionals enable you to write dynamic and interactive programs that can respond to user input and other changing variables. Let's have a look at how they work.
+
+Imagine we have the following variable:
+let temperature = 75;
+
+The value of this variable will most likely change over time.
+
+Now imagine that you want to inform the user of your application if it is warm outside – let's say if the temperature is above 70.
+
+That's where we use our first if-statement. Run the code to see what happens.
+let temperature = 75;
+console.log(`The temperature is ${temperature}`); // The temperature is 75
+ 
+if (temperature > 70) {
+   console.log("It's warm outside"); // It's warm outside
+}
+
+
+That's right, since the temperature is above 70, our little program logs that it's warm outside.
+
+Now, the temperature has changed. Let's see what happens.
+let temperature = 60;
+console.log(`The temperature is ${temperature}`); // The temperature is 60
+ 
+if (temperature > 70) {
+   console.log("It's warm outside"); // 
+}
+
+Since the temperature is not above 70, the log statement is not executed.
+
+But, how does it work?
+
+The if-statement executes a block of code if a certain condition is true. It consists of the if keyword followed by a condition in parentheses, and a block of code in curly braces.
+if (Condition) {
+ Block of code
+}
+
+
+Let's see if you understood.
+
+What will be the output?
+let num = 10;
+ 
+if (num >= 10) {
+   num = num + 5;
+}
+ 
+console.log(num); // 15
+
+
+
+What will be the output?
+let test;
+ 
+if (false) {
+   test = 'test';
+}
+ 
+console.log(test); // undefined

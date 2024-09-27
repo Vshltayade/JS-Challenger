@@ -1,0 +1,20 @@
+You already know how to execute a piece of code if a certain condition is true. In this lesson we will learn how to test multiple conditions to adapt to a wider range of inputs.
+
+if-else
+if(){
+
+} else{
+
+}
+
+
+-else if-
+if(){
+
+} else if(){
+
+} else if(){
+    
+} else {
+    
+}
