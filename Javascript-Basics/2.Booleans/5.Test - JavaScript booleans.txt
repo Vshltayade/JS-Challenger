@@ -1,0 +1,32 @@
+Take the final test about JavaScript booleans to conclude this topic.
+
+What will be the output?
+let isTrue = true;
+console.log(isTrue); // true
+
+
+What will be the output?
+const name = 'james';
+console.log(Boolean(name)); // true
+
+
+What will be the output?
+console.log(Boolean(1)); // true
+console.log(Boolean(0)); // false
+console.log(Boolean(-1)); // true
+
+
+True or False?
+const num = 10;
+num is falsy. -> false
+
+
+True or False?
+Every single value in JavaScript can be transformed to a boolean value. -> true
+
+
+What will be the output?
+const price = 10;
+console.log(Boolean(price)); // true
+
+

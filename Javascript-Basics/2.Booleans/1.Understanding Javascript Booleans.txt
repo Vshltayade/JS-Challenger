@@ -1,0 +1,30 @@
+In this lesson you will learn about JavaScript booleans. Just like numbers, booleans are a data type. They simply indicate if something is true or false.
+
+In the previous sections you learnt how to create variables and assign numbers to them — like this one that indicates the price of an arbitrary product:
+const price = 10;
+
+But, sometimes you might want to store information that cannot be represented by a number.
+
+For example, the product for which we already have a price could sometimes be on sale and sometimes not.
+
+To store this kind of information we can use JavaScript Booleans, like so:
+const isOnSale = true;
+
+The value true indicates that the product is on sale.
+
+Booleans can have only two values: true and false
+
+If the product is not on sale, we assign false:
+const isOnSale = false;
+
+The same way we can reassign variables with numbers, we can also reassign variables with Booleans. Let's try it:
+let isOnSale = true;
+console.log(isOnSale); -> true
+isOnSale = false;
+console.log(isOnSale); -> false
+
+What will be the output?
+let isOnSale = false;
+console.log(isOnSale); -> false
+isOnSale = true;
+console.log(isOnSale); -> true
