@@ -1,0 +1,53 @@
+We already know how to use the Equal To and Not Equal To operators. Let's look at some more comparison operators.
+
+Let's look at other types of comparison operators.
+
+The Greater than (>) operator checks if the left value is greater than the right value. For example:
+2 > 1 // checks if 2 is greater than 1
+
+Can you guess what the output will be?
+const priceOne = 5;
+const priceTwo = 10;
+ 
+console.log(priceOne > priceTwo); // false
+console.log(priceTwo > priceOne); // true
+
+
+The Less than (<) operator checks if the left value is less than the right value. For example:
+2 < 1 // checks if 2 is less than 1
+
+Let's use the Less than operator in the example for above:
+const priceOne = 5;
+const priceTwo = 10;
+ 
+console.log(priceOne < priceTwo); // true 
+console.log(priceTwo < priceOne); // false
+
+
+Similar to the operators above, there are also the Less than or equal (<=) and Greater than or equal (>=) operators. For example:
+2 <= 1 // checks if 2 is less than or equal 1
+2 >= 1 // checks if 2 is greater than or equal 1
+
+const priceOne = 10;
+const priceTwo = 15;
+const priceThree = 10;
+ 
+console.log(priceOne >= priceTwo); // false
+console.log(priceOne >= priceThree); // true
+ 
+console.log(priceOne <= priceTwo); // true
+console.log(priceOne <= priceThree); // true
+
+
+What will be the output?
+console.log(2 < 1); // false
+
+
+const priceOne = 1;
+const priceTwo = 1;
+const priceThree = 2
+ 
+console.log(priceOne <= priceTwo); // true
+ 
+console.log(priceOne <= priceThree); // true
+ 
