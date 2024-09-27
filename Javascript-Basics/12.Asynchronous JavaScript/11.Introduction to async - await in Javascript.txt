@@ -1,0 +1,141 @@
+In this lesson, you will learn about the newest and most modern way to manage asynchronous operations: async/await. Discover the advantages of this pattern and how it compares to other approaches like then().
+
+Asynchronous operations can be difficult to manage. It's not always easy to understand when and why things happen.
+
+That's why it's important to write clean and readable code.
+
+Over time, different patterns have emerged in the JavaScript world for writing asynchronous operations.
+
+The newest and most modern of these approaches is the async/await pattern.
+
+The async/await pattern has solved a few readability problems of the .then() approach that you already know of.
+
+Let's say we have a simple function that returns a promise and resolves after 1000 milliseconds:
+function delay() {
+   return new Promise(resolve => setTimeout(resolve, 1000));
+}
+
+With .then(), we could use this function as follows:
+function delay() {
+   return new Promise(resolve => setTimeout(resolve, 1000));
+}
+ 
+function logMessageWithDelay() {
+  console.log('Starting task...');
+  delay()
+    .then(() => {
+      console.log('Task finished!');
+    });
+  console.log('Message from the end of the function.')
+}
+ 
+logMessageWithDelay()
+//Starting task...
+//Message from the end of the function.
+//Task finished!
+
+
+
+Here, we successfully log a message after the promise resolves.
+
+However, could you have predicted the order in which the three different log messages appear?
+
+In programming, we like to read code from top to bottom. We expect that the order in which operations appear in your code corresponds to the order of execution within a function.
+
+But in our example, we have to infer from the .then() syntax that console.log('Message from the end of the function.') will execute before the promise is fulfilled.
+
+
+Let's check out how async/await works:
+function delay() {
+   return new Promise(resolve => setTimeout(resolve, 1000));
+}
+ 
+async function logMessageWithDelay() {
+  console.log('Starting task...');
+  await delay()
+  console.log('Task finished!');
+  console.log('Message from the end of the function.')
+}
+ 
+logMessageWithDelay()
+//Starting task...
+//Task finished!
+//Message from the end of the function.
+
+
+Here, we also log a message once the promise is resolved, and the execution follows from top to bottom, so the final log statement is executed at the end.
+
+So, the way we read the code inside the function also corresponds to the order in which things are executed.
+
+Additionally, the code inside the function appears cleaner because we no longer have a nested block of code, as we did with the .then() syntax.
+
+So, how does async/await work?
+
+Notice the keyword async right before the function declaration.
+async function func() {
+   console.log('I am asynchronous and return a promise');
+}
+
+When a function is declared with the async keyword, we can use await inside it:
+function delay() {
+   return new Promise(resolve => setTimeout(resolve, 1000));
+}
+ 
+async function func() {
+   await delay();
+   console.log('I am asynchronous and return a promise');
+}
+
+await is usually followed by a promise expression or a function that returns a promise it can 'wait' for.
+
+When an await expression is encountered in an async function, the function execution is paused at that line until the promise settles.
+
+However, it's essential to note that this pause in execution doesn't mean that other tasks outside the function are blocked. JavaScript can continue executing other code outside the function.
+
+Here, the console.log() statement that follows the function call is not blocked by the asynchronous task.
+function delay() {
+   return new Promise(resolve => setTimeout(resolve, 1000));
+}
+ 
+async function func() {
+   await delay();
+   console.log('Promise resolved!');
+}
+func()
+console.log('I am not blocked');
+//I am not blocked
+//Promise resolved!
+
+
+
+What will be the output?
+async function example() {
+  console.log('Start');
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  console.log('Middle');
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  console.log('End');
+}
+ 
+example();
+//start
+//after 2s
+//Middle
+//after 1s
+//end
+
+
+
+What will be the output?
+async function example() {
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  console.log('Done');
+}
+ 
+console.log('Start');
+example();
+console.log('End');
+//start
+//end
+//after 2s
+//done
