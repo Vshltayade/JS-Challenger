@@ -1,0 +1,8 @@
+In this lesson you will learn how to use function parameters and arguments to write dynamic and flexible functions.
+
+function func(a,b){
+    let sum = a + b;
+    return sum;
+}
+
+console.log(func(2,4)) // 6
