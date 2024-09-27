@@ -1,0 +1,16 @@
+JavaScript loops are used to execute a block of code multiple times. They are useful for repeating a task a certain number of times, or for working with arrays and other collections of data.
+
+
+for
+for(initialize;condition;increment){
+    body
+}
+
+while(condition){
+    incr/decr;
+}
+
+do..while
+do{
+    body
+}while(condition)
