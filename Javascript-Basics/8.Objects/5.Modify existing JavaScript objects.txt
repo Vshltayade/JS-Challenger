@@ -1,0 +1,16 @@
+In this lesson you will learn how to add new properties to existing objects, how to change property values, and how to delete properties.
+
+let person = new Object();
+
+person['name'] = 'v';
+person.age = 21;
+
+console.log(person);//{ name: 'v', age: 21 }
+
+person.age = 50;
+
+console.log(person.age) // 50
+
+delete person.age;
+
+console.log(person.age) // undefined

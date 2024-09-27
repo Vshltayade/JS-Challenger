@@ -1,0 +1,20 @@
+JavaScript Objects allow you to store and organize data in a structured way. You will see how to create a new object, add properties to it, and access those properties.
+
+let obj = new Object();
+//{}
+
+obj.a = 1;
+obj.fun = function(){console.log('hi')};
+
+
+obj;
+{
+    a:1,
+    fun:function(){console.log('hi')};
+}
+
+
+let obj1 = {
+    name : 'v',
+    course : 'py'
+}
