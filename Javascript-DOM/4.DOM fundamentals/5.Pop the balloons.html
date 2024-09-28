@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop the balloons</title>
+    <style>
+        ul{
+            display: flex;
+        }
+        li{
+            margin: 25px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <!-- Make the balloons pop by hovering over them.
+    Extend the JavaScript code below to interact with the displayed HTML elements. Every time you hover over a balloon, it should become invisible.
+    Your goal is to pop all the balloons one after the other. -->
+    <ul id="list">
+        <li/>
+        <li/>
+        <li/>
+        <li/>
+        <li/>
+        <li/>
+        <li/>
+        <li/>
+        <li/>
+        <li/>
+    </ul>
+
+    <script>
+        const list = document.querySelectorAll('#list li');
+        // let promise = new Promise((resolve, reject) => {
+        //     resolve();
+        // })
+        list.forEach((ele) => {
+            ele.addEventListener('mouseenter', () => {
+                ele.style.background = 'white';
+            })
+            ele.addEventListener('mouseleave', () => {
+                ele.style.background = 'red';
+            })
+            // promise = promise.then((result)=>{
+            //     ele.style.display = 'none';
+            //     return new Promise((rs,rj)=>{
+            //         setTimeout(()=>{
+            //             rs();
+            //         },600);
+            //     })
+            // })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input filter list</title>
+</head>
+<body>
+    <!-- In this challenge, we create a dynamic input filter with JavaScript.
+    Extend the code below to interact with the displayed HTML elements. Type a search term in the input field. The displayed items in the list should match your search term. The rest of the list elements should be hidden. -->
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+        <li>bts</li>
+    </ul>
+    <br><br>
+    <input type="text"><br><br>
+    <button>search item</button>
+
+    <script>
+        const ul = document.querySelectorAll('ul li');
+        const inp = document.getElementsByTagName('input')[0];
+        const btn = document.getElementsByTagName('button')[0];
+
+        btn.addEventListener('click', () => {
+            ul.forEach((ele) => {
+                if(!(inp.value === ele.innerHTML)){
+                    ele.innerHTML = '';
+                }
+            })
+        })
+    </script>
+</body>
+</html>

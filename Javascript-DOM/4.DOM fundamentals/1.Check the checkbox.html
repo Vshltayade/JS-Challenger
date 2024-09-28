@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check the checkbox</title>
+</head>
+<body>
+    <!-- Your first JavaScript DOM exercise. Let's start simple.
+    Extend the JavaScript code below to interact with the displayed HTML elements. Once you click the button, the checkbox should be checked.
+    Confirm your code by clicking the button! -->
+    <input type="checkbox" id="checkbox" disabled/>
+    <label for="checkbox">checkbox</label><br><br>
+    <button type="button" id="button">Verify Code</button>
+
+    <script>
+        const button = document.getElementById('button');
+        button.addEventListener('click', () => {
+            // type in your code here
+            // (document.getElementById('checkbox')).removeAttribute('disabled');
+            // (document.getElementById('checkbox')).setAttribute('checked', true);
+            (document.getElementById('checkbox')).checked = true;
+        });
+    </script>
+</body>
+</html>

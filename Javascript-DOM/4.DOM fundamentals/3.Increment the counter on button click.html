@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment the counter on button click</title>
+</head>
+<body>
+    <!-- Extend the JavaScript code below to interact with the displayed HTML elements.
+    On each button click, increase the value of the button by 1.
+    Confirm your code by clicking the button! -->
+    <button>0</button>
+
+    <script>
+        let count = 0;
+        const btn = document.getElementsByTagName('button')[0];
+        (btn).addEventListener('click', ()=>{
+            count++;
+            btn.innerHTML = count;
+        })
+    </script>
+</body>
+</html>
