@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new list item and add to DOM</title>
+</head>
+<body>
+    <!-- Extend the JavaScript code below to interact with the displayed HTML elements.
+    Enter a new todo in the input field. Once you click the button, the new todo item should appear at the bottom of the list.
+    Confirm your code by creating a new todo! -->
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+    </ul>
+
+    <input type="text">
+    <br>
+    <button>Add Item</button>
+
+    <script>
+        const ul = document.querySelector('ul');
+        const inp = document.getElementsByTagName('input')[0];
+        const btn = document.getElementsByTagName('button')[0];
+
+        btn.addEventListener('click', () => {
+            if(inp.value.length){
+                const li = document.createElement('li');
+                li.innerHTML = inp.value;
+                ul.appendChild(li);
+                inp.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

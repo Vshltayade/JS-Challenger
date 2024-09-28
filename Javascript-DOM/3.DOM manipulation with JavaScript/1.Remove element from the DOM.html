@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove element from the DOM</title>
+</head>
+<body>
+    <!-- You may not see it in the example UI, but underneath the red circle is a green circle. Extend the function removeRedCircle to remove the circle with id red from the DOM.
+    Make sure that you really remove the element instead of just hiding it. Confirm that your code works by clicking the button. -->
+    <div id="green" style="width: 100px; height: 100px; background-color: green; border-radius: 50%;">
+        <div id="red" style="width: 100px; height: 100px; background-color: red; border-radius: 50%;"></div>
+    </div>
+    <button type="button" id="button" style="margin: 20px;">Click Me</button>
+
+    <script>
+        const button = document.querySelector('#button');
+
+        const removeRedCircle = () => {
+            document.getElementById('red').remove();
+        };
+
+        button.addEventListener('click', removeRedCircle);
+
+    </script>
+</body>
+</html>
