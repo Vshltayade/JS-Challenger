@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop element into another element</title>
+</head>
+<body style="box-sizing: content-box;">
+    <!-- Here we want to drop the red square into the blue square. But, when you try to drop it there, it jumps back to where it was before. Make use of the function handleDrop to join the two elements together.
+    You pass the challenge if you drop the red square into the blue one and it stays there. -->
+    <div id="div1" style="width: 50px; height: 50px; background-color: red; border: 3px solid;"></div>
+    <div id="div2" style="width: 100px; height: 100px; background-color: blue; position: relative; top: 100px; left: 500px; border: 3px solid; display: flex; justify-content: center; align-items: center;"></div>
+
+    <script>
+        const div1 = document.getElementsByTagName('div')[0];
+        const div2 = document.getElementsByTagName('div')[1];
+
+        div1.draggable = true;
+
+        div1.addEventListener('dragstart', e => e.dataTransfer.setData('div', e.target.id));
+
+        div2.addEventListener('dragover', e => e.preventDefault());
+
+        div2.addEventListener('drop', (e) => {
+            e.preventDefault();            
+            const data = e.dataTransfer.getData('div');
+            e.target.appendChild(document.getElementById(data));
+        })
+    </script>
+</body>
+</html>

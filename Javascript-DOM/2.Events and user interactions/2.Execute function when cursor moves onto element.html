@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execute function when cursor moves onto element</title>
+</head>
+<body>
+    <!-- The Javascript function changeText changes the text inside the circle. But again, there is no code to execute this function.
+    Complete the existing code below such that the function is called when the cursor moves onto the circle. Verify that your code works by hovering over the circle. -->
+    <div id="element" style="width: 100px; height: 100px; border-radius: 50%; border: 1px solid; text-align: center; line-height: 100px;">
+        Hover Me
+    </div>
+
+    <script>
+        const element = document.getElementById('element');
+
+        const changeText = () => {
+        element.innerText = 'Thanks!';
+        };
+
+        // type in your code here
+        element.addEventListener('mouseover', changeText);
+
+    </script>
+</body>
+</html>
