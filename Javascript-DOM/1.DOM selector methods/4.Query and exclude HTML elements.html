@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query and exclude HTML elements</title>
+</head>
+<body>
+    <!-- In this scenario, you need to query all list items that belong to the list with id 'list'. But, exclude the ones with id 'disabled'
+    Assign those items to the variable 'listItems' by using an appropriate selector method.
+    Once you have completed the code below, verify it by clicking the button. The respective items should change their text. -->
+    <ul id="list">
+        <li>OFF</li>
+        <li>OFF</li>
+        <li id="disabled">OFF</li>
+        <li>OFF</li>
+        <li>OFF</li>
+        <li id="disabled">OFF</li>
+    </ul>
+
+    <script>
+        // assign the correct elements to the variable
+        const listItems = document.querySelectorAll('#list li:not(#disabled)');
+        // console.log(listItems);
+
+        const handleHover = (event) => {
+            return event.target.innerText = 'ON';
+        };
+        if(listItems.length > 1) {
+            listItems.forEach(item => item.addEventListener('mouseover', handleHover));
+        }
+    </script>
+</body>
+</html>
